@@ -1,0 +1,40 @@
+*{
+    text-align: center;
+}
+body{
+    background-color: #C6FF28;
+    color: green;
+    font-weight: bolder;
+}
+#newCard{
+    display:none;
+    margin:0 auto;
+   
+}
+button{
+    background-color: green;
+    width: 100px;
+    height: 35px;
+    color:#C6FF28;
+    border:#C6FF28 1px solid;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+button:hover{
+    background:#C6FF28;
+    color:green;
+    border:green 1px solid;
+   transition: 0.2s ease;
+}
+
+input{
+    width:30px;
+}
+section{
+    background: red;
+    color:white;
+    display:none;
+}
+#rules-btn:hover~section{
+    display:block;
+}
