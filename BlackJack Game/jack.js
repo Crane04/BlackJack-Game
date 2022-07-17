@@ -49,7 +49,7 @@ function goGame(){
     messageEl.innerText="You won!"
     hasAce=true
     document.getElementById("newCard").style.display="none"
-    money=money+2
+    money=money+5
     document.getElementById("startEl").style.display="none"
     moneyEl.innerHTML=` <input id="money-el" readonly value=${money}>` 
 
@@ -67,18 +67,24 @@ localStorage.setItem("money",JSON.stringify(money))
 }
 
 
+
+ 
+function newRandomCard(){
+    let arrNew=[2,3,4,5,6,7,8,9,10,11]
+    let goIndexNew=Math.floor(Math.random()*10) 
+    return arrNew[goIndexNew]
+}
 newCard.addEventListener("click",function(){
     if (hasAce===false && isAlive===true){
-    card=randomCard()
-    cards.push(card)
-    sum+=cards[2]
-    cardsEl.textContent+=sum+card
+    newCardHere=newRandomCard()
+   document.querySelector("#newcards").innerText+= " "+newCardHere+" "
+   document.querySelector("#newcards").style.display="block"
+    sum+=newCardHere
+    //cardsEl.textContent+=sum+newCardHere
     } 
 goGame()
 
 })
- 
-
 
 quit.addEventListener("click",function(){
     document.querySelector("body").innerHTML=

@@ -5,11 +5,15 @@ body{
     background-color: #C6FF28;
     color: green;
     font-weight: bolder;
+    font-size: 15px;
 }
 #newCard{
     display:none;
     margin:0 auto;
    
+}
+#newcards{
+    display: none;
 }
 button{
     background-color: green;
